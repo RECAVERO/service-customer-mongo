@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: service-eureka
+          default-label: service-gateway
           uri: https://github.com/RECAVERO/service-customer-mongo
           search-paths: config-data
   application:

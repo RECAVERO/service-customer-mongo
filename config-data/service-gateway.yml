@@ -19,8 +19,6 @@ spring:
           uri: lb://service-customer
           predicates:
             - Path=/customer/**
-          filters:
-            - AuthFilter
     loadbalancer:
       ribbon:
         enabled: false
