@@ -1,0 +1,29 @@
+server:
+  port: 8787
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+spring:
+  cloud:
+    gateway:
+      dicovery:
+        locator:
+          enable: true
+      routes:
+        - id: service-customer
+          uri: lb://service-customer
+          predicates:
+            - Path=/customer/**
+          filters:
+            - AuthFilter
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+
+
