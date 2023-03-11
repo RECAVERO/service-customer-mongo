@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          default-label: config-server-data
-          uri: https://github.com/RECAVERO/service-customer-mongo/
+          default-label: config-server
+          uri: https://github.com/RECAVERO/service-customer-mongo
           search-paths: config-data
   application:
     name: config-service
