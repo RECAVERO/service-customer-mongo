@@ -1,0 +1,8 @@
+server:
+  port: 4143
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customerPrueba
